@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/plat.png" id="1_dr483"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nukta"]
+atlas = ExtResource("1_dr483")
+region = Rect2(0, 0, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eymwj"]
+atlas = ExtResource("1_dr483")
+region = Rect2(0, 12, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyga5"]
+atlas = ExtResource("1_dr483")
+region = Rect2(0, 24, 16, 12)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nukta")
+}],
+"loop": false,
+"name": &"l",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eymwj")
+}],
+"loop": false,
+"name": &"mid",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyga5")
+}],
+"loop": false,
+"name": &"r",
+"speed": 1.0
+}]

@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/spore.png" id="1_mfjse"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feh4n"]
+atlas = ExtResource("1_mfjse")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj81o"]
+atlas = ExtResource("1_mfjse")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feh4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj81o")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 8.0
+}]

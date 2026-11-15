@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/gate.png" id="1_pedt0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdkpr"]
+atlas = ExtResource("1_pedt0")
+region = Rect2(0, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34d21"]
+atlas = ExtResource("1_pedt0")
+region = Rect2(16, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qntm5"]
+atlas = ExtResource("1_pedt0")
+region = Rect2(32, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lo12"]
+atlas = ExtResource("1_pedt0")
+region = Rect2(48, 0, 16, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdkpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34d21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qntm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lo12")
+}],
+"loop": true,
+"name": &"glow",
+"speed": 5.0
+}]

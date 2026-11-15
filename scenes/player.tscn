@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_edv41"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/player_frames.tres" id="2_mxu8n"]
+[ext_resource type="Texture2D" path="res://assets/lights/light_soft.png" id="3_7yc4e"]
+[ext_resource type="Texture2D" path="res://assets/sprites/particle_dot.png" id="4_ofa0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7lvs"]
+size = Vector2(12, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d6wf"]
+size = Vector2(12, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42b8o"]
+size = Vector2(34, 30)
+
+[sub_resource type="Gradient" id="Gradient_7apgt"]
+offsets = PackedFloat32Array(0, 0.35, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_edv41")
+max_health = 5
+death_y = 560.0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("2_mxu8n")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Body" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_d7lvs")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 152
+
+[node name="Shape" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_4d6wf")
+
+[node name="InteractSensor" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 256
+
+[node name="Shape" type="CollisionShape2D" parent="InteractSensor"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_42b8o")
+
+[node name="Glow" type="PointLight2D" parent="."]
+position = Vector2(0, -14)
+color = Color(0.5, 0.97, 1, 1)
+energy = 0.8
+texture = ExtResource("3_7yc4e")
+texture_scale = 2.4
+
+[node name="Camera" type="Camera2D" parent="."]
+offset = Vector2(0, -26)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="BoltSpawn" type="Marker2D" parent="."]
+
+[node name="Fireflies" type="CPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(0, -40)
+amount = 34
+lifetime = 6.0
+preprocess = 6.0
+texture = ExtResource("4_ofa0b")
+emission_shape = 3
+emission_rect_extents = Vector2(340, 190)
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 9.0
+color = Color(0.7, 1, 0.9, 0.9)
+color_ramp = SubResource("Gradient_7apgt")

@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/lever.png" id="1_x6k1d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ovon"]
+atlas = ExtResource("1_x6k1d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dss2y"]
+atlas = ExtResource("1_x6k1d")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ovon")
+}],
+"loop": false,
+"name": &"off",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dss2y")
+}],
+"loop": false,
+"name": &"on",
+"speed": 1.0
+}]

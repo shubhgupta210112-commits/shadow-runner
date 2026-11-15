@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/shard.png" id="1_aia1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b82gs"]
+atlas = ExtResource("1_aia1v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd5dl"]
+atlas = ExtResource("1_aia1v")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwfts"]
+atlas = ExtResource("1_aia1v")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnl54"]
+atlas = ExtResource("1_aia1v")
+region = Rect2(48, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b82gs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd5dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwfts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnl54")
+}],
+"loop": true,
+"name": &"shimmer",
+"speed": 6.0
+}]

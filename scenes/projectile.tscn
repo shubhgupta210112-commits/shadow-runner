@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_gk6k6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nj22i"]
+size = Vector2(8, 8)
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_gk6k6")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nj22i")

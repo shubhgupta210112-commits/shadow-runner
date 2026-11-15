@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_k0v63"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/boss_frames.tres" id="2_3rio1"]
+[ext_resource type="Texture2D" path="res://assets/lights/light_soft.png" id="3_pssjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ietcq"]
+size = Vector2(60, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe5ie"]
+size = Vector2(64, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lkfc"]
+size = Vector2(24, 12)
+
+[node name="Boss" type="CharacterBody2D"]
+z_index = 2
+collision_layer = 0
+script = ExtResource("1_k0v63")
+max_health = 24
+arena_left = 0.0
+arena_right = 400.0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -48)
+sprite_frames = ExtResource("2_3rio1")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Body" type="CollisionShape2D" parent="."]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_ietcq")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_pe5ie")
+
+[node name="WeakSpot" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="WeakSpot"]
+position = Vector2(20, -62)
+shape = SubResource("RectangleShape2D_5lkfc")
+
+[node name="Aura" type="PointLight2D" parent="."]
+position = Vector2(10, -40)
+color = Color(0.88, 0.29, 0.82, 1)
+energy = 0.9
+texture = ExtResource("3_pssjo")
+texture_scale = 3.0

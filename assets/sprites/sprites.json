@@ -1,0 +1,390 @@
+{
+ "player": {
+  "frame": [
+   48,
+   32
+  ],
+  "anims": {
+   "idle": {
+    "row": 0,
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+   },
+   "run": {
+    "row": 1,
+    "frames": 8,
+    "fps": 12,
+    "loop": true
+   },
+   "jump": {
+    "row": 2,
+    "frames": 2,
+    "fps": 8,
+    "loop": false
+   },
+   "fall": {
+    "row": 3,
+    "frames": 2,
+    "fps": 8,
+    "loop": true
+   },
+   "land": {
+    "row": 4,
+    "frames": 2,
+    "fps": 14,
+    "loop": false
+   },
+   "hit": {
+    "row": 5,
+    "frames": 2,
+    "fps": 10,
+    "loop": false
+   },
+   "cast": {
+    "row": 6,
+    "frames": 3,
+    "fps": 18,
+    "loop": false
+   }
+  }
+ },
+ "mossling": {
+  "frame": [
+   32,
+   24
+  ],
+  "anims": {
+   "walk": {
+    "row": 0,
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+   },
+   "alert": {
+    "row": 1,
+    "frames": 2,
+    "fps": 10,
+    "loop": true
+   },
+   "squash": {
+    "row": 2,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   }
+  }
+ },
+ "wisp": {
+  "frame": [
+   32,
+   32
+  ],
+  "anims": {
+   "fly": {
+    "row": 0,
+    "frames": 4,
+    "fps": 10,
+    "loop": true
+   },
+   "dive": {
+    "row": 1,
+    "frames": 2,
+    "fps": 14,
+    "loop": true
+   }
+  }
+ },
+ "sporecap": {
+  "frame": [
+   32,
+   32
+  ],
+  "anims": {
+   "idle": {
+    "row": 0,
+    "frames": 2,
+    "fps": 3,
+    "loop": true
+   },
+   "shoot": {
+    "row": 1,
+    "frames": 3,
+    "fps": 10,
+    "loop": false
+   }
+  }
+ },
+ "boss": {
+  "frame": [
+   96,
+   96
+  ],
+  "anims": {
+   "idle": {
+    "row": 0,
+    "frames": 4,
+    "fps": 4,
+    "loop": true
+   },
+   "run": {
+    "row": 1,
+    "frames": 6,
+    "fps": 12,
+    "loop": true
+   },
+   "windup": {
+    "row": 2,
+    "frames": 2,
+    "fps": 8,
+    "loop": true
+   },
+   "slam": {
+    "row": 3,
+    "frames": 2,
+    "fps": 6,
+    "loop": false
+   },
+   "stun": {
+    "row": 4,
+    "frames": 2,
+    "fps": 4,
+    "loop": true
+   }
+  }
+ },
+ "coin": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "spin": {
+    "row": 0,
+    "frames": 6,
+    "fps": 10,
+    "loop": true
+   }
+  }
+ },
+ "heart_pickup": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "bob": {
+    "row": 0,
+    "frames": 2,
+    "fps": 3,
+    "loop": true
+   }
+  }
+ },
+ "shard": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "shimmer": {
+    "row": 0,
+    "frames": 4,
+    "fps": 6,
+    "loop": true
+   }
+  }
+ },
+ "checkpoint": {
+  "frame": [
+   24,
+   40
+  ],
+  "anims": {
+   "off": {
+    "row": 0,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   },
+   "on": {
+    "row": 1,
+    "frames": 4,
+    "fps": 8,
+    "loop": true
+   }
+  }
+ },
+ "lever": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "off": {
+    "row": 0,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   },
+   "on": {
+    "row": 1,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   }
+  }
+ },
+ "gate": {
+  "frame": [
+   16,
+   64
+  ],
+  "anims": {
+   "glow": {
+    "row": 0,
+    "frames": 4,
+    "fps": 5,
+    "loop": true
+   }
+  }
+ },
+ "spikes": {
+  "frame": [
+   16,
+   8
+  ],
+  "anims": {
+   "default": {
+    "row": 0,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   }
+  }
+ },
+ "portal": {
+  "frame": [
+   32,
+   48
+  ],
+  "anims": {
+   "swirl": {
+    "row": 0,
+    "frames": 4,
+    "fps": 7,
+    "loop": true
+   }
+  }
+ },
+ "plat": {
+  "frame": [
+   16,
+   12
+  ],
+  "anims": {
+   "l": {
+    "row": 0,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   },
+   "mid": {
+    "row": 1,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   },
+   "r": {
+    "row": 2,
+    "frames": 1,
+    "fps": 1,
+    "loop": false
+   }
+  }
+ },
+ "bolt": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "fly": {
+    "row": 0,
+    "frames": 3,
+    "fps": 14,
+    "loop": true
+   }
+  }
+ },
+ "spore": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "fly": {
+    "row": 0,
+    "frames": 2,
+    "fps": 8,
+    "loop": true
+   }
+  }
+ },
+ "orb": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "fly": {
+    "row": 0,
+    "frames": 3,
+    "fps": 10,
+    "loop": true
+   }
+  }
+ },
+ "spear": {
+  "frame": [
+   16,
+   32
+  ],
+  "anims": {
+   "fall": {
+    "row": 0,
+    "frames": 2,
+    "fps": 8,
+    "loop": true
+   }
+  }
+ },
+ "wave": {
+  "frame": [
+   24,
+   20
+  ],
+  "anims": {
+   "move": {
+    "row": 0,
+    "frames": 3,
+    "fps": 10,
+    "loop": true
+   }
+  }
+ },
+ "puff": {
+  "frame": [
+   16,
+   16
+  ],
+  "anims": {
+   "pop": {
+    "row": 0,
+    "frames": 4,
+    "fps": 14,
+    "loop": false
+   }
+  }
+ }
+}

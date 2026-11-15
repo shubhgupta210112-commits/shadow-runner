@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/checkpoint.png" id="1_3ysi6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wbrj"]
+atlas = ExtResource("1_3ysi6")
+region = Rect2(0, 0, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72tl7"]
+atlas = ExtResource("1_3ysi6")
+region = Rect2(0, 40, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08e53"]
+atlas = ExtResource("1_3ysi6")
+region = Rect2(24, 40, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tpm0"]
+atlas = ExtResource("1_3ysi6")
+region = Rect2(48, 40, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jmv2"]
+atlas = ExtResource("1_3ysi6")
+region = Rect2(72, 40, 24, 40)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wbrj")
+}],
+"loop": false,
+"name": &"off",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72tl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08e53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tpm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jmv2")
+}],
+"loop": true,
+"name": &"on",
+"speed": 8.0
+}]

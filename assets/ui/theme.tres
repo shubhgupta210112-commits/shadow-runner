@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=4 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_0eb23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8181"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2, 0.15, 0.38, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5, 0.97, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_458eg"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.12, 0.1, 0.24, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.3, 0.6, 1)
+
+[resource]
+default_font = ExtResource("1_0eb23")
+default_font_size = 8
+Button/colors/font_color = Color(0.88, 0.92, 1, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_w8181")
+Button/styles/hover = SubResource("StyleBoxFlat_w8181")
+Button/styles/normal = SubResource("StyleBoxFlat_458eg")
+Button/styles/pressed = SubResource("StyleBoxFlat_w8181")
+Label/colors/font_color = Color(0.88, 0.92, 1, 1)

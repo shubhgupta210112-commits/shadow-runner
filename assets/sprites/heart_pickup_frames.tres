@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/heart_pickup.png" id="1_l4g4o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdstt"]
+atlas = ExtResource("1_l4g4o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yk4h"]
+atlas = ExtResource("1_l4g4o")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdstt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yk4h")
+}],
+"loop": true,
+"name": &"bob",
+"speed": 3.0
+}]

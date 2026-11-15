@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_p3xg0"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/portal_frames.tres" id="2_6pauo"]
+[ext_resource type="Texture2D" path="res://assets/lights/light_soft.png" id="3_p1itd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8scsd"]
+size = Vector2(20, 40)
+
+[node name="Exit" type="Area2D"]
+script = ExtResource("1_p3xg0")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = ExtResource("2_6pauo")
+animation = &"swirl"
+autoplay = "swirl"
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_8scsd")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, -24)
+color = Color(0.5, 0.97, 1, 1)
+energy = 1.1
+texture = ExtResource("3_p1itd")
+texture_scale = 3.4

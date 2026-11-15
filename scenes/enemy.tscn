@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_rvt4q"]
+
+[node name="Enemy" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_rvt4q")
+kind = 0
+patrol_range = 64.0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="Body" type="CollisionShape2D" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox"]
+
+[node name="FloorRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 14)
+collision_mask = 3
+
+[node name="WallRay" type="RayCast2D" parent="."]
+target_position = Vector2(14, 0)

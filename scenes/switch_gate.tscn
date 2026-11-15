@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/switch_gate.gd" id="1_87tn1"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="2_00bhd"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/lever_frames.tres" id="3_gp2gx"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/gate_frames.tres" id="4_ol3du"]
+[ext_resource type="Texture2D" path="res://assets/lights/light_soft.png" id="5_odrus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnta5"]
+size = Vector2(26, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_poqyg"]
+size = Vector2(14, 128)
+
+[node name="SwitchGate" type="Node2D"]
+script = ExtResource("1_87tn1")
+gate_offset = Vector2(64, -32)
+gate_pieces = 2
+prompt_text = "[E] Pull lever"
+
+[node name="Lever" type="Area2D" parent="."]
+script = ExtResource("2_00bhd")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Lever"]
+position = Vector2(0, -8)
+sprite_frames = ExtResource("3_gp2gx")
+animation = &"off"
+autoplay = "off"
+
+[node name="Shape" type="CollisionShape2D" parent="Lever"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_cnta5")
+
+[node name="Gate" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Gate"]
+position = Vector2(0, -32)
+sprite_frames = ExtResource("4_ol3du")
+animation = &"glow"
+autoplay = "glow"
+
+[node name="Shape" type="CollisionShape2D" parent="Gate"]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_poqyg")
+
+[node name="Light" type="PointLight2D" parent="Gate"]
+position = Vector2(0, -64)
+color = Color(0.88, 0.29, 0.82, 1)
+energy = 0.9
+texture = ExtResource("5_odrus")
+texture_scale = 2.8
